@@ -77,4 +77,7 @@ for esemeny in esemenyek:
     if esemeny.esemeny == 2:
         kiment = (esemeny.ora, esemeny.perc)
 kulonbseg_percben = (kiment[0]*60+kiment[1]) - (bejott[0]*60+bejott[1])
-print('A tanuló érkezése és távozása között %d óra %d perc telt el.'%(kulonbseg_percben // 60, kulonbseg_percben % 60))
+if lattuk_bejonni:
+    print('A tanuló érkezése és távozása között %d óra %d perc telt el.'%(kulonbseg_percben // 60, kulonbseg_percben % 60))
+else:
+    print('Ilyen azonosítójú tanuló aznap nem volt az iskolában.')
